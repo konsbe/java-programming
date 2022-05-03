@@ -4,7 +4,9 @@ public class Main {
     public static void main (String[] args){
         Human myHuman = new Human();
         Professor p1 = new Professor();
+        Dog d1 = new Dog();
         Student myStud = new Student();
+        Secretary mySecr = new Secretary();
         myHuman.myMethodOne();
         myHuman.speak("yes");
         myHuman.who("human");
@@ -12,7 +14,9 @@ public class Main {
         myStud.myMethodOne();
         myStud.speak("student");
         myStud.who("student");
-        p1.acceptedPeopleWhoSpeak(myStud);
-        p1.acceptedPeopleWhoSpeak(myHuman);
+        mySecr.who("secretary");
+        d1.acceptedPeopleWhoSpeak(myStud);
+        d1.acceptedPeopleWhoSpeak(myHuman);
+        p1.acceptedPeopleWhoSpeak(mySecr);
     }
 }
