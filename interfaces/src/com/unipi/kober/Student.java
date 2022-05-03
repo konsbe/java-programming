@@ -1,6 +1,6 @@
 package com.unipi.kober;
 
-public class Student extends Object  implements ISpeak{
+public class Student extends Object  implements ISpeak, IRaiseHand{
     @Override
     public void myMethodOne() {
         System.out.println("Not Default text..");
@@ -11,4 +11,11 @@ public class Student extends Object  implements ISpeak{
         System.out.println("Student say " + s);
     }
 
+    public void raiseHand() {
+
+    }
+
+    public void lowerHand() {
+
+    }
 }
