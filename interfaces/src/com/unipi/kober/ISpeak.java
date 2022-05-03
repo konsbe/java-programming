@@ -4,6 +4,9 @@ public interface ISpeak {
     default void myMethodOne(){
         System.out.println("Default text..");
     }
+    default void who(String k){
+        System.out.println("Who am i?..: "+k);
+    }
     abstract void speak(String s);
 }
 
@@ -17,6 +20,7 @@ class Human implements ISpeak,IFreak{
     public void myMethodTwo() {
         System.out.println("Some other human text...");
     }
+
     public void speak(String s){
         System.out.println("Abstract class of Human... "+ s);
     }
