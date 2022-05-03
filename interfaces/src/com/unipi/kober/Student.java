@@ -8,7 +8,7 @@ public class Student extends Object  implements ISpeak{
 
     @Override
     public void speak(String s) {
-        System.out.println("I say" + s);
+        System.out.println("Student say " + s);
     }
 
 }

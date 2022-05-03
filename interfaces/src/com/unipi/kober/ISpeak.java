@@ -12,12 +12,12 @@ interface IFreak {
 }
 class Human implements ISpeak,IFreak{
     public void myMethodOne() {
-        System.out.println("Some text..");
+        System.out.println("Some human text..");
     }
     public void myMethodTwo() {
-        System.out.println("Some other text...");
+        System.out.println("Some other human text...");
     }
     public void speak(String s){
-        System.out.println("Abstract class..."+ s);
+        System.out.println("Abstract class of Human... "+ s);
     }
 }

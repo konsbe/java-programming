@@ -8,5 +8,8 @@ public class Main {
         Student myStud = new Student();
         myStud.myMethodOne();
         myStud.speak("student");
+        Professor p1 = new Professor();
+        p1.acceptedPeopleWhoSpeak(myStud);
+        p1.acceptedPeopleWhoSpeak(myHuman);
     }
 }
