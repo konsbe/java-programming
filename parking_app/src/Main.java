@@ -35,7 +35,7 @@ class Display {
                     Parking.daily_earn();
                     break;
                 case "5":
-                    break;
+                    return;
                 default:
             }
 

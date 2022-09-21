@@ -11,8 +11,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import static java.lang.Integer.parseInt;
 
 public class Parking implements IParking {
-    static ArrayList<Vehicle> parking_seats = new ArrayList<Vehicle>(); // Create an ArrayList object
-    static HashMap<String, Vehicle> capitalPark = new HashMap<String, Vehicle>();
     public static float earn_money;
     static int total_left;
     static int total_motocross;
@@ -33,16 +31,16 @@ public class Parking implements IParking {
         capitalPark.forEach((k, v) -> {
             if ((v.vehicle_plate == args ) && (v.vehicle_type == EnumVehicle.CAR)) {
                 total_cars +=1;
-                price.set(Exchange.exchange_calculation(capitalPark, v, args));
+                price.set(Exchange.exchange_calculation(capitalPark, v));
                 earn_money += price.get();
             }
                 else if (v.vehicle_plate == args && (v.vehicle_type == EnumVehicle.MOTOCROSS)) {
-                price.set(Exchange.exchange_calculation(capitalPark, v, args));
+                price.set(Exchange.exchange_calculation(capitalPark, v));
                 total_motocross +=1;
                 earn_money += price.get();
             }
         });
-        System.out.println("\nYou will pay " + earn_money);
+        System.out.println("\nYou will pay " + price);
         parking_seats.removeIf(x -> x.vehicle_plate == args);
         capitalPark.remove(String.valueOf(args));
         capitalPark.forEach((k, v) -> System.out.println("\nKey : " + k + " Value : " + v.vehicle_plate));

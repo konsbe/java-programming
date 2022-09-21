@@ -16,6 +16,7 @@ public class Zoo implements IZoo {
         });
         capitalZoo.put(String.valueOf(animal.index), animal);
         capitalZoo.forEach((k, v) -> System.out.println("\nKey : " + k + " Value : " + animal.animal_spice));
+        animal_zoo.add(animal);
         try {
             FileOutputStream myFileOutStream
                     = new FileOutputStream(
